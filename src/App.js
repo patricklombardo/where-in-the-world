@@ -11,8 +11,8 @@ function App() {
       <Route exact path ="/">
         <CountryList />
       </Route>
-      <Route>
-        <CountryDetail exact path="'/:id"/>
+      <Route exact path="/foo">
+        <CountryDetail />
       </Route>
     </BrowserRouter>
   );
