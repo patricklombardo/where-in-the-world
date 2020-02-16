@@ -12,6 +12,14 @@ const App = () => {
   const { data, loading } = useCountryData();
   console.log(data);
 
+  if (loading) {
+    return (
+      <div>
+        Loading
+      </div>
+    )
+  }
+
   return (
     <BrowserRouter>
       <Route exact path="/">
