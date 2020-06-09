@@ -1,18 +1,17 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/Navbar';
-import Card from '../components/Card';
+import CountryCard from '../components/CountryCard';
 
-export const CountryList = ({countries }) => {
+export const CountryList = ({ countries }) => {
   const testCountry = countries[0];
-  console.log(testCountry);
-
+  console.log(countries);
   return (
-    <div>
-      <Navbar />
-      <Card country={testCountry} />
-
+    <div className="container">
+      {countries.map(country => (
+        <CountryCard country={country} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default CountryList;

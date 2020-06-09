@@ -13,17 +13,14 @@ const App = () => {
   console.log(data);
 
   if (loading) {
-    return (
-      <div>
-        Loading
-      </div>
-    )
+    return <div>Loading</div>;
   }
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Route exact path="/">
-        <CountryList countries={data}/>
+        <CountryList countries={data} />
       </Route>
       <Route exact path="/foo">
         <CountryDetail />

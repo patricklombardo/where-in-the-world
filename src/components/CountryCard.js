@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Card = ({ country }) => {
+export const CountryCard = ({ country }) => {
   const { name, population, region, capital, flag } = country;
   return (
     <div className="card">
@@ -26,4 +26,4 @@ export const Card = ({ country }) => {
   );
 };
 
-export default Card;
+export default CountryCard;
